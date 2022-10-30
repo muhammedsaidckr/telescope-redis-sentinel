@@ -14,3 +14,7 @@
 #### REDIS_CACHE_DATABASE=1
 #### REDIS_SESSION_DATABASE=2
 #### REDIS_QUEUE_DATABASE=3
+
+# Run project
+
+./vendor/bin/sail up --scale redis-sentinel=3 -d
