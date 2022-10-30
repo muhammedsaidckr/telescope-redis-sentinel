@@ -7,9 +7,12 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
+        "laravel/breeze": "^1.14",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/telescope": "^4.9",
+        "laravel/tinker": "^2.7",
+        "monospice/laravel-redis-sentinel-drivers": "dev-master"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -27,6 +30,12 @@
             "Database\\Seeders\\": "database/seeders/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "modules/laravel-redis-sentinel-drivers"
+        }
+    ],
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
@@ -49,7 +58,10 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "monospice/laravel-redis-sentinel-drivers",
+                "laravel/telescope"
+            ]
         }
     },
     "config": {
